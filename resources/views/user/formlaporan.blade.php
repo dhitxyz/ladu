@@ -28,7 +28,7 @@
     @endif
 
     <div class="mb-6">
-        <h1 class="text-xl font-medium text-white pl-3.5 py-2.5 mb-1 bg-[#CA0B3E]">
+        <h1 class="text-xl font-medium text-white pl-3.5 py-2.5 mb-1 bg-[#a51a39]">
             Sampaikan laporan anda
         </h1>
     </div>
@@ -44,10 +44,10 @@
             >
                 @foreach ($classifications as $value => $label)
                 <label
-                    class="flex-1 cursor-pointer text-center py-3 text-xs font-semibold transition-all {{ !$loop->last ? 'border-r border-[#CA0B3E]' : '' }}"
+                    class="flex-1 cursor-pointer text-center py-3 text-xs font-semibold transition-all {{ !$loop->last ? 'border-r border-[#a51a39]' : '' }}"
                     :class="classification === '{{ $value }}'
-                        ? 'bg-[#CA0B3E] text-white'
-                        : 'bg-transparent text-[#CA0B3E] hover:bg-red-50'"
+                        ? 'bg-[#a51a39] text-white'
+                        : 'bg-transparent text-[#a51a39] hover:bg-red-50'"
                 >
                     <input
                         type="radio"
@@ -62,7 +62,7 @@
                             <i class="fa-solid fa-check"></i>
                         </template>
                         <template x-if="classification !== '{{ $value }}'">
-                            <span class="w-4 h-4 border border-[#CA0B3E] rounded-full"></span>
+                            <span class="w-4 h-4 border border-[#a51a39] rounded-full"></span>
                         </template>
                         {{ strtoupper($label) }}
                     </span>
@@ -72,7 +72,7 @@
 
             <p class="text-xs text-center mt-4 text-gray-500 flex items-center justify-center gap-2">
                 Perhatikan Cara Menyampaikan Laporan Yang Baik dan Benar
-                <span class="w-5 h-5 flex items-center justify-center rounded border border-[#CA0B3E] text-[#CA0B3E] text-xs cursor-pointer">
+                <span class="w-5 h-5 flex items-center justify-center rounded border border-[#a51a39] text-[#a51a39] text-xs cursor-pointer">
                     ?
                 </span>
             </p>
@@ -195,7 +195,7 @@
                                             <button
                                                 type="button"
                                                 x-on:click="removeFile(index)"
-                                                class="text-[#CA0B3E] font-bold cursor-pointer"
+                                                class="text-[#a51a39] font-bold cursor-pointer"
                                             >
                                                 <i class="fa-solid fa-close"></i>
                                             </button>
@@ -224,7 +224,7 @@
                             <label class="flex items-center gap-2 text-sm text-gray-500 cursor-pointer select-none">
                                 <input
                                     type="checkbox"
-                                    class="accent-[#CA0B3E] cursor-pointer"
+                                    class="accent-[#a51a39] cursor-pointer"
                                     name="anonim"
                                     value="1"
                                     {{ old('anonim') ? 'checked' : '' }}
@@ -236,7 +236,7 @@
                             <label class="flex items-center gap-2 text-sm text-gray-500 cursor-pointer select-none">
                                 <input
                                     type="checkbox"
-                                    class="accent-[#CA0B3E] cursor-pointer"
+                                    class="accent-[#a51a39] cursor-pointer"
                                     name="rahasia"
                                     value="1"
                                     {{ old('rahasia') ? 'checked' : '' }}
@@ -245,7 +245,7 @@
                             </label>
                         </div>
 
-                        <button type="button" onclick="confirmSubmit()" class="cursor-pointer px-6 py-2.5 bg-[#CA0B3E] text-white text-sm font-medium rounded-lg hover:bg-[#aa0b33] transition-all">
+                        <button type="button" onclick="confirmSubmit()" class="cursor-pointer px-6 py-2.5 bg-[#a51a39] text-white text-sm font-medium rounded-lg hover:bg-[#aa0b33] transition-all">
                             Lapor!
                         </button>
                     </div>
@@ -301,7 +301,7 @@ function confirmSubmit() {
         html: "Pastikan semua data sudah benar.<br>Laporan tidak bisa diubah setelah dikirim.",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#CA0B3E",
+        confirmButtonColor: "#a51a39",
         cancelButtonColor: "#aaa",
         confirmButtonText: "Ya, kirim!",
         cancelButtonText: "Batal"

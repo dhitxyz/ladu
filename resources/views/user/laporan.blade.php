@@ -10,7 +10,7 @@
         <div class="overflow-hidden">
 
             <div class="relative h-96">
-                <img src="images/bg.jpg" class="w-full h-full object-cover">
+                <img src="images/bg4.png" class="w-full h-full object-cover object-[center_15%]">
 
                 <div class="absolute bottom-0 left-0 w-full px-52 pb-6 flex justify-between items-end">
 

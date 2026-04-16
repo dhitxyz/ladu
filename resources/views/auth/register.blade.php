@@ -2,7 +2,10 @@
 
 @section('content')
 
-<div class="py-18 bg-cover relative" style="background-image: url('{{ asset('images/bg.jpg') }}')">
+<div class="py-18 bg-cover bg-center bg-no-repeat relative"
+     style="background-image: url('{{ asset('images/bg4.png') }}')">
+
+
 
     <div class="flex justify-center mb-18">
         <a href="/">
@@ -163,7 +166,7 @@
 
             </div>
 
-            <button class="cursor-pointer w-full font-medium mt-6 bg-[#CA0B3E] text-white py-3 rounded-md shadow hover:bg-[#aa0b33] transition">
+            <button class="cursor-pointer w-full font-medium mt-6 bg-[#a51a39] text-white py-3 rounded-md shadow hover:bg-[#aa0b33] transition">
                 DAFTAR
             </button>
 

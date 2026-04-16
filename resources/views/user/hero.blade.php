@@ -1,14 +1,15 @@
 <section
     class="text-white pt-52 pb-64 relative bg-cover"
-    style="background-image: url('{{ asset('images/bg.jpg') }}')"
+    style="background-image: url('{{ asset('images/bg4.png') }}')"
 >
     <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-medium leading-snug">
-            Layanan Aspirasi dan Pengaduan Online Rakyat Bali
+            Ngadu Jani Sing Perlu Ribet
         </h2>
 
         <p class="text-2xl mt-4">
-            Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang
+            Yen ada masalah, langsung laporin di sini jak<br>
+Biar lebih jelas prosesnya lan ada hasil nyatanya
         </p>
 
         <hr class="w-20 border-3 border-white mt-8 mx-auto" />

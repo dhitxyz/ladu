@@ -1,22 +1,38 @@
 @php
 $stories = [
     [
-        'title' => 'SIINas',
-        'desc' => 'Menanyakan cara pengisian SIINas',
-        'name' => 'Siti Malikhah',
+        'title' => 'Ayam Bisa Ngoding Laravel',
+        'desc' => 'Melihat ayam tetangga tiba-tiba deploy project ke production jam 3 pagi tanpa error. Diduga pakai kopi Bali level dewa.',
+        'name' => 'I Wayan Rengas',
     ],
     [
-        'title' => 'Informasi Magang Karantina',
-        'desc' => 'Apakah bisa untuk magang PKL dari Universitas Brawijaya, Prodi Budidaya Perairan',
-        'name' => 'Hasna Nuranisa Ipnia Putri',
+        'title' => 'Babi Guling Diet Keto',
+        'desc' => 'Seekor babi guling menolak nasi dan hanya makan alpukat. Kini jadi influencer diet di Banjar.',
+        'name' => 'Ni Kadek Sulastri',
     ],
     [
-        'title' => 'Ikan Nyuci Piring',
-        'desc' => 'Izin lapor saluran air di walahar tembusan dari sungai citarum...',
-        'name' => 'Andrew Frederick',
+        'title' => 'Ojol Naik Barong',
+        'desc' => 'Driver ojek online terlihat mengantar penumpang pakai Barong, estimasi tiba: tergantung mood roh.',
+        'name' => 'I Made Gacor',
+    ],
+    [
+        'title' => 'Wifi Pura Lebih Kencang',
+        'desc' => 'Sinyal di rumah lemot, tapi di pura malah bisa download film 4K dalam 3 detik. Diduga restu leluhur.',
+        'name' => 'Komang Suartini',
+    ],
+    [
+        'title' => 'Kucing Jadi Pecalang',
+        'desc' => 'Seekor kucing mengatur lalu lintas saat upacara. Warga patuh karena tatapannya mengandung ancaman spiritual.',
+        'name' => 'Ketut Santuy',
+    ],
+    [
+        'title' => 'Es Teh Bisa Nyanyi',
+        'desc' => 'Segelas es teh tiba-tiba menyanyikan lagu dangdut saat disentuh. Viral di 3 desa dan 1 dimensi lain.',
+        'name' => 'Luh Jegeg Pixel',
     ],
 ];
 @endphp
+
 
 <section class="py-32 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">

@@ -2,20 +2,20 @@
 <aside class="w-64 min-h-full flex flex-col">
     <nav class="flex-1 px-3 py-4 space-y-1 text-sm">
         <a href="{{ route('admin.dashboard') }}"
-           class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.dashboard') ? 'bg-[#CA0B3E]/15 text-[#CA0B3E] font-semibold' : '' }}">
+           class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.dashboard') ? 'bg-[#a51a39]/15 text-[#a51a39] font-semibold' : '' }}">
             <i class="fa fa-house"></i>
             <span>Dashboard</span>
         </a>
 
         <div x-data="{ open: {{ request()->routeIs('admin.laporan*') ? 'true' : 'false' }} }" class="space-y-1">
             <button @click="open = !open"
-                    class="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.laporan*') ? 'bg-[#CA0B3E]/15 text-[#CA0B3E] font-semibold' : '' }}">
+                    class="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.laporan*') ? 'bg-[#a51a39]/15 text-[#a51a39] font-semibold' : '' }}">
                 <div class="flex items-center gap-3">
                     <i class="fa fa-file"></i>
                     <span>Laporan</span>
                 </div>
-                <i class="fa fa-chevron-down text-xs {{ request()->routeIs('admin.laporan*') ? 'text-[#CA0B3E]' : 'text-gray-400' }}" x-show="open"></i>
-                <i class="fa fa-chevron-right text-xs {{ request()->routeIs('admin.laporan*') ? 'text-[#CA0B3E]' : 'text-gray-400' }}" x-show="!open"></i>
+                <i class="fa fa-chevron-down text-xs {{ request()->routeIs('admin.laporan*') ? 'text-[#a51a39]' : 'text-gray-400' }}" x-show="open"></i>
+                <i class="fa fa-chevron-right text-xs {{ request()->routeIs('admin.laporan*') ? 'text-[#a51a39]' : 'text-gray-400' }}" x-show="!open"></i>
             </button>
 
             <div x-show="open" x-transition class="ml-7 space-y-1">
@@ -54,7 +54,7 @@
         </div>
 
         <a href="{{ route('admin.users') }}"
-           class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.users*') ? 'bg-[#CA0B3E]/15 text-[#CA0B3E] font-semibold' : '' }}">
+           class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.users*') ? 'bg-[#a51a39]/15 text-[#a51a39] font-semibold' : '' }}">
             <i class="fa fa-user"></i>
             <span>Users</span>
         </a>

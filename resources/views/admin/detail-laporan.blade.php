@@ -11,7 +11,7 @@
         <main class="flex-1 p-6 space-y-6">
             <div class="mb-4">
                 <nav class="text-sm text-gray-500 flex items-center gap-2">
-                    <a href="{{ route('admin.laporan.index') }}" class="hover:text-gray-700 text-[#CA0B3E]">
+                    <a href="{{ route('admin.laporan.index') }}" class="hover:text-gray-700 text-[#a51a39]">
                         Laporan
                     </a>
                     <span>></span>
@@ -73,7 +73,7 @@
                                             <i class="fa fa-file text-gray-400"></i>
                                             <span class="text-gray-700">{{ basename($file) }}</span>
                                         </div>
-                                        <a href="{{ asset('storage/' . $file) }}" target="_blank" class="text-[#CA0B3E] hover:text-[#CA0B3E]/80 font-medium">
+                                        <a href="{{ asset('storage/' . $file) }}" target="_blank" class="text-[#a51a39] hover:text-[#a51a39]/80 font-medium">
                                             Download
                                         </a>
                                     </div>
@@ -143,7 +143,7 @@
                                 </label>
                             </div>
 
-                            <button type="submit" class="w-full bg-[#CA0B3E] text-white py-2 rounded-lg font-medium hover:bg-[#CA0B3E]/80 transition">
+                            <button type="submit" class="w-full bg-[#a51a39] text-white py-2 rounded-lg font-medium hover:bg-[#a51a39]/80 transition">
                                 <i class="fa fa-save mr-2"></i>Simpan Perubahan
                             </button>
                         </form>
@@ -171,7 +171,7 @@
                                     <p class="text-sm text-gray-500">Alamat</p>
                                     <p class="font-medium text-gray-900">{{ $laporan->user->alamat ?? '-' }}</p>
                                 </div>
-                                <a href="{{ route('admin.users.show', $laporan->user->id) }}" class="inline-block mt-4 text-[#CA0B3E] hover:text-[#CA0B3E]/80 font-medium">
+                                <a href="{{ route('admin.users.show', $laporan->user->id) }}" class="inline-block mt-4 text-[#a51a39] hover:text-[#a51a39]/80 font-medium">
                                     Lihat Profile User →
                                 </a>
                             @else

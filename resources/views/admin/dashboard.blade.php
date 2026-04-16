@@ -63,8 +63,8 @@
                 <form method="GET" action="{{ route('admin.dashboard') }}" class="flex gap-4 flex-1">
                     <input type="text" name="search" placeholder="Cari judul laporan atau nama user..."
                            value="{{ request('search') }}"
-                           class="flex-1 px-4 py-2 rounded-lg border border-gray-300/50 focus:outline-none focus:ring focus:ring-[#CA0B3E]/50">
-                    <button type="submit" class="px-6 py-2 bg-[#CA0B3E] text-white rounded-lg hover:bg-[#CA0B3E]/80 transition font-medium">
+                           class="flex-1 px-4 py-2 rounded-lg border border-gray-300/50 focus:outline-none focus:ring focus:ring-[#a51a39]/50">
+                    <button type="submit" class="px-6 py-2 bg-[#a51a39] text-white rounded-lg hover:bg-[#a51a39]/80 transition font-medium">
                         <i class="fa fa-search mr-2"></i>Cari
                     </button>
                 </form>
@@ -103,7 +103,7 @@
                                         @endif
                                     </td>
                                     <td class="p-4">
-                                        <a href="{{ route('admin.laporan.show', $laporan->id) }}" class="text-[#CA0B3E] font-medium hover:underline">
+                                        <a href="{{ route('admin.laporan.show', $laporan->id) }}" class="text-[#a51a39] font-medium hover:underline">
                                             Lihat Detail
                                         </a>
                                     </td>

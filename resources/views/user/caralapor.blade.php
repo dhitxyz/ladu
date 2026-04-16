@@ -14,7 +14,7 @@
                     @endif
 
                     <div class="relative z-10 w-14 h-14 mx-auto flex items-center justify-center rounded-full text-white text-sm
-                        {{ $index === 0 ? 'bg-[#CA0B3E]' : 'bg-gray-300' }}">
+                        {{ $index === 0 ? 'bg-[#a51a39]' : 'bg-gray-300' }}">
 
                         @php
                             $icons = [

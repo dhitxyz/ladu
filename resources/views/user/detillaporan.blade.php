@@ -11,7 +11,7 @@
 
             <div class="flex items-start gap-4 flex-1 min-w-0">
 
-                <img src="https://www.lapor.go.id/themes/lapor/assets/images/user-placeholder-m.png"
+                <img src="{{ auth()->user()->jenis_kelamin === 'perempuan' ? asset('images/user-placeholder-f.png') : asset('images/user-placeholder-m.png') }}"
                      class="w-12 h-12 rounded-full shrink-0">
 
                 <div class="flex flex-col gap-1 min-w-0 w-full">

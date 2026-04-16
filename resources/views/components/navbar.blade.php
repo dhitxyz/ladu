@@ -1,7 +1,7 @@
 <nav
     x-data="navbarScroll()"
     x-init="init()"
-    :class="scrolled ? 'bg-white text-[#CA0B3E] shadow-md' : 'bg-transparent text-white'"
+    :class="scrolled ? 'bg-white text-[#a51a39] shadow-md' : 'bg-transparent text-white'"
     class="fixed top-0 left-0 w-full z-50"
 >
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-6 font-medium">
@@ -33,8 +33,8 @@
 
                 <a href="{{ route('register') }}"
                     :class="scrolled
-                        ? 'border border-[#CA0B3E] px-6 py-2 rounded hover:bg-[#CA0B3E] hover:text-white transition'
-                        : 'border border-white px-6 py-2 rounded hover:bg-white hover:text-[#CA0B3E] transition'">
+                        ? 'border border-[#a51a39] px-6 py-2 rounded hover:bg-[#a51a39] hover:text-white transition'
+                        : 'border border-white px-6 py-2 rounded hover:bg-white hover:text-[#a51a39] transition'">
                     Daftar
                 </a>
             @endguest

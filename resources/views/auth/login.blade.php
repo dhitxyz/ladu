@@ -37,7 +37,7 @@
                 Email, No. telp, atau username
               </label>
               <input type="text" name="login" required autocomplete="username"
-                class="w-full mt-1 px-3 py-3 rounded-md text-sm border border-gray-300 focus:border-[#CA0B3E] focus:ring-2 focus:ring-red-100 outline-none transition">
+                class="w-full mt-1 px-3 py-3 rounded-md text-sm border border-gray-300 focus:border-[#a51a39] focus:ring-2 focus:ring-red-100 outline-none transition">
             </div>
 
             <div class="w-[65%]">
@@ -45,11 +45,11 @@
                 Password
               </label>
               <input type="password" name="password" required
-                class="w-full mt-1 px-3 py-3 rounded-md text-sm border border-gray-300 focus:border-[#CA0B3E] focus:ring-2 focus:ring-red-100 outline-none transition">
+                class="w-full mt-1 px-3 py-3 rounded-md text-sm border border-gray-300 focus:border-[#a51a39] focus:ring-2 focus:ring-red-100 outline-none transition">
             </div>
 
             <button type="submit"
-              class="cursor-pointer w-[65%] mt-2 py-3 bg-[#CA0B3E] text-white text-sm font-semibold rounded-md hover:bg-[#aa0b33] transition">
+              class="cursor-pointer w-[65%] mt-2 py-3 bg-[#a51a39] text-white text-sm font-semibold rounded-md hover:bg-[#aa0b33] transition">
               LOGIN
             </button>
 
@@ -59,7 +59,7 @@
 
             <div class="w-[65%] pt-6 text-center text-sm text-gray-600">
               Anda memiliki punya akun? <br><br>
-              <a href="{{ route('register') }}" class="text-[#CA0B3E] font-semibold hover:underline">
+              <a href="{{ route('register') }}" class="text-[#a51a39] font-semibold hover:underline">
                 DAFTAR SEKARANG
               </a>
             </div>

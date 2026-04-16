@@ -11,7 +11,7 @@
         <main class="flex-1 p-6 space-y-6">
             <div class="mb-4">
                 <nav class="text-sm text-gray-500 flex items-center gap-2">
-                    <a href="{{ route('admin.users') }}" class="hover:text-gray-700 text-[#CA0B3E]">
+                    <a href="{{ route('admin.users') }}" class="hover:text-gray-700 text-[#a51a39]">
                         Users
                     </a>
                     <span>></span>
@@ -126,7 +126,7 @@
                             <button onclick="if(confirm('Yakin ingin menghapus user ini?')) { /* delete action */ }" class="w-full px-4 py-2 rounded-lg border border-red-300/50 text-red-600 hover:bg-red-50 transition font-medium">
                                 <i class="fa fa-trash mr-2"></i>Hapus User
                             </button>
-                            <a href="{{ route('admin.laporan.index') }}?user={{ $user->id }}" class="block text-center px-4 py-2 rounded-lg bg-[#CA0B3E] text-white hover:bg-[#CA0B3E]/80 transition font-medium">
+                            <a href="{{ route('admin.laporan.index') }}?user={{ $user->id }}" class="block text-center px-4 py-2 rounded-lg bg-[#a51a39] text-white hover:bg-[#a51a39]/80 transition font-medium">
                                 <i class="fa fa-file mr-2"></i>Lihat Laporan
                             </a>
                         </div>
