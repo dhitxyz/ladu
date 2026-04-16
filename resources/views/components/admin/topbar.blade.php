@@ -14,7 +14,7 @@
 
         <div x-data="{ open: false }" class="relative">
             <button @click="open = !open" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition">
-                <img src="{{ auth()->user()->jenis_kelamin === 'perempuan' ? 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-f.png' : 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-m.png' }}" alt="{{ auth()->user()->nama_lengkap }}" class="w-10 h-10 rounded-full object-cover">
+                <img src="{{ auth()->user()->jenis_kelamin === 'perempuan' ? asset('images/user-placeholder-f.png') : asset('images/user-placeholder-m.png') }}" alt="{{ auth()->user()->nama_lengkap }}" class="w-10 h-10 rounded-full object-cover">
             </button>
 
             <div x-show="open" @click.away="open = false" x-transition

@@ -29,7 +29,7 @@
                                     {{ ucfirst($user->role) }}
                                 </span>
                             </div>
-                            <img src="{{ $user->jenis_kelamin === 'perempuan' ? 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-f.png' : 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-m.png' }}" alt="{{ $user->nama_lengkap }}" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200">
+                            <img src="{{ $user->jenis_kelamin === 'perempuan' ? asset('images/user-placeholder-f.png') : asset('images/user-placeholder-m.png') }}" alt="{{ $user->nama_lengkap }}" class="w-16 h-16 rounded-full object-cover border-2 border-gray-200">
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">

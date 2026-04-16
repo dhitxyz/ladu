@@ -15,7 +15,7 @@
                 <div class="absolute bottom-0 left-0 w-full px-52 pb-6 flex justify-between items-end">
 
                     <div class="flex items-center gap-4">
-                        <img src="{{ auth()->user()->jenis_kelamin === 'perempuan' ? 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-f.png' : 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-m.png' }}" alt="{{ auth()->user()->nama_lengkap }}" class="w-32 h-32 rounded-full border-4 border-white object-cover">
+                        <img src="{{ auth()->user()->jenis_kelamin === 'perempuan' ? asset('images/user-placeholder-f.png') : asset('images/user-placeholder-m.png') }}" alt="{{ auth()->user()->nama_lengkap }}" class="w-32 h-32 rounded-full border-4 border-white object-cover">
 
                         <h1 class="text-2xl font-bold text-white drop-shadow">
                             {{ auth()->user()->username }}
