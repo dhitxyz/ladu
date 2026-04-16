@@ -33,7 +33,7 @@
         </h1>
     </div>
 
-    <form action="{{ route('laporan.store') }}" method="POST" enctype="multipart/form-data" autocomplete="off">
+    <form id="formLaporan" action="{{ route('laporan.store') }}" method="POST" enctype="multipart/form-data" autocomplete="off">
         @csrf
 
         <div class="mb-5 px-3.5">
@@ -245,7 +245,7 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="cursor-pointer px-6 py-2.5 bg-[#CA0B3E] text-white text-sm font-medium rounded-lg hover:bg-[#aa0b33] transition-all">
+                        <button type="button" onclick="confirmSubmit()" class="cursor-pointer px-6 py-2.5 bg-[#CA0B3E] text-white text-sm font-medium rounded-lg hover:bg-[#aa0b33] transition-all">
                             Lapor!
                         </button>
                     </div>
@@ -283,5 +283,32 @@ function fileUpload() {
             this.$refs.fileInput.files = dataTransfer.files
         }
     }
+}
+</script>
+
+<script>
+function confirmSubmit() {
+    const form = document.getElementById('formLaporan');
+
+    // cek validasi dulu (required, dll)
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    Swal.fire({
+        title: "Kirim laporan?",
+        html: "Pastikan semua data sudah benar.<br>Laporan tidak bisa diubah setelah dikirim.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#CA0B3E",
+        cancelButtonColor: "#aaa",
+        confirmButtonText: "Ya, kirim!",
+        cancelButtonText: "Batal"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            form.submit();
+        }
+    });
 }
 </script>

@@ -8,7 +8,7 @@ use App\Models\Laporan;
 
 class LaporanController extends Controller
 {
-public function laporanSaya(Request $request)
+public function index(Request $request)
 {
     $query = Laporan::query();
 
@@ -18,7 +18,14 @@ public function laporanSaya(Request $request)
 
     $laporans = $query->latest()->get();
 
-    return view('user.laporansaya', compact('laporans'));
+    return view('user.laporan', compact('laporans'));
+}
+
+public function show($id)
+{
+    $laporan = Laporan::findOrFail($id);
+
+    return view('user.detillaporan', compact('laporan'));
 }
 
     public function create()

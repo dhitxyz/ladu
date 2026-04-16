@@ -30,6 +30,11 @@ Route::get('/', [LaporanController::class, 'create'])->name('home');
 Route::middleware('auth')->group(function () {
     Route::post('/laporan', [LaporanController::class, 'store'])
         ->name('laporan.store');
-        Route::get('/laporan', [LaporanController::class, 'laporansaya']);
+        Route::get('/laporan', [LaporanController::class, 'index']);
+        Route::get('/laporan/{id}', [LaporanController::class, 'show']);
         });
+
+        Route::get('/detil', function () {
+    return view('user.detillaporan');
+})->name('laporan.show');
 

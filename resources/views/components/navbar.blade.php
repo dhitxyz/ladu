@@ -85,7 +85,7 @@
                             <div class="w-full flex items-center my-2">
           <hr class="grow border-gray-300">
         </div>
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="POST" action="{{ route('logout') }}"  onsubmit="return confirm('okegas')">
                 @csrf
                 <button type="submit" class="w-full text-left px-4 py-2 hover:bg-gray-100">
                     Logout
@@ -103,7 +103,7 @@
 </nav>
 
 <script>
-const isDetail = {{ Request::is('detil/*') ? 'true' : 'false' }};
+const isDetail = {{ Request::is('laporan/*') ? 'true' : 'false' }};
 
 function navbarScroll() {
     return {

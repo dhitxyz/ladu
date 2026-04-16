@@ -28,4 +28,22 @@ class Laporan extends Model
     'anonim' => 'boolean',
     'rahasia' => 'boolean',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function getDisplayNameAttribute()
+    {
+        if ($this->anonim == 1) {
+            return 'Anonim';
+        }
+
+        if ($this->rahasia == 1) {
+            return 'Rahasia';
+        }
+
+        return $this->user?->username;
+    }
 }
