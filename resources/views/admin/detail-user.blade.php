@@ -3,20 +3,12 @@
 @section('content')
 
 <div class="min-h-screen bg-[#fafafa] flex flex-col">
-
-    {{-- TOPBAR COMPONENT --}}
     <x-admin.topbar :title="'Detail User'" />
 
-    {{-- BODY --}}
     <div class="flex flex-1">
-
-        {{-- NAVBAR COMPONENT --}}
         <x-admin.navbar />
 
-        {{-- MAIN CONTENT --}}
         <main class="flex-1 p-6 space-y-6">
-
-            {{-- BREADCRUMB --}}
             <div class="mb-4">
                 <nav class="text-sm text-gray-500 flex items-center gap-2">
                     <a href="{{ route('admin.users') }}" class="hover:text-gray-700 text-[#CA0B3E]">
@@ -27,13 +19,8 @@
                 </nav>
             </div>
 
-            {{-- CONTENT --}}
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-                {{-- LEFT SIDE - PROFILE & INFO --}}
                 <div class="lg:col-span-2 space-y-6">
-
-                    {{-- PROFILE CARD --}}
                     <div class="bg-white rounded-xl p-6 border border-gray-300/50">
                         <div class="flex items-start justify-between mb-6 pb-6 border-b border-gray-300/50">
                             <div>
@@ -81,7 +68,6 @@
                         </div>
                     </div>
 
-                    {{-- LAPORAN STATS --}}
                     <div class="grid grid-cols-3 gap-4">
                         <div class="bg-white rounded-xl p-4 border border-gray-300/50 text-center">
                             <p class="text-3xl font-bold text-gray-900">{{ $user->laporans()->count() }}</p>
@@ -96,8 +82,6 @@
                             <p class="text-sm text-gray-500 mt-1">Selesai</p>
                         </div>
                     </div>
-
-                    {{-- LAPORAN TERBARU --}}
                     <div class="bg-white rounded-xl p-6 border border-gray-300/50">
                         <h2 class="text-lg font-semibold text-gray-900 mb-4">Laporan Terbaru</h2>
 

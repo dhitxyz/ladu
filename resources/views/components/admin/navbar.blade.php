@@ -1,16 +1,12 @@
 {{-- Navbar Sidebar Component --}}
 <aside class="w-64 min-h-full flex flex-col">
-
     <nav class="flex-1 px-3 py-4 space-y-1 text-sm">
-
-        {{-- Dashboard Link --}}
         <a href="{{ route('admin.dashboard') }}"
            class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.dashboard') ? 'bg-[#CA0B3E]/15 text-[#CA0B3E] font-semibold' : '' }}">
             <i class="fa fa-house"></i>
             <span>Dashboard</span>
         </a>
 
-        {{-- Laporan Menu (Collapsible) --}}
         <div x-data="{ open: {{ request()->routeIs('admin.laporan*') ? 'true' : 'false' }} }" class="space-y-1">
             <button @click="open = !open"
                     class="w-full flex items-center justify-between px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.laporan*') ? 'bg-[#CA0B3E]/15 text-[#CA0B3E] font-semibold' : '' }}">
@@ -57,13 +53,10 @@
             </div>
         </div>
 
-        {{-- Users Link --}}
         <a href="{{ route('admin.users') }}"
            class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition {{ request()->routeIs('admin.users*') ? 'bg-[#CA0B3E]/15 text-[#CA0B3E] font-semibold' : '' }}">
             <i class="fa fa-user"></i>
             <span>Users</span>
         </a>
-
     </nav>
-
 </aside>

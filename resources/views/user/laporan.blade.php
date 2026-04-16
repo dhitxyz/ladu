@@ -55,8 +55,8 @@
                     @php
                         $tabs = [
                             'semua' => 'Semua',
-                            'belum_diproses' => 'Belum Diproses',
-                            'proses' => 'Diproses',
+                            'pending' => 'Belum Diproses',
+                            'diproses' => 'Diproses',
                             'selesai' => 'Selesai',
                         ];
                     @endphp
@@ -104,12 +104,12 @@
                                             <span class="text-xs whitespace-nowrap pt-1.5 px-2 py-1 rounded-full font-semibold
                                                 {{ $status === 'selesai'
                                                     ? 'bg-green-100 text-green-600'
-                                                    : ($status === 'proses'
+                                                    : ($status === 'diproses'
                                                         ? 'bg-yellow-100 text-yellow-600'
                                                         : 'bg-red-100 text-red-600') }}">
                                                 {{ $status === 'selesai'
                                                     ? 'Selesai'
-                                                    : ($status === 'proses'
+                                                    : ($status === 'diproses'
                                                         ? 'Diproses'
                                                         : 'Belum Diproses') }}
                                             </span>

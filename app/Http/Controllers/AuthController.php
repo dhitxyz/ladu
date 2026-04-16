@@ -46,19 +46,19 @@ class AuthController extends Controller
             'password' => $request->password,
         ];
 
-if (Auth::attempt($credentials)) {
-    $request->session()->regenerate();
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
 
-    $user = Auth::user();
+            $user = Auth::user();
 
-    if ($user->role === 'admin') {
-        return redirect('/admin')
-            ->with('success', 'Login berhasil sebagai admin');
-    }
+            if ($user->role === 'admin') {
+                return redirect('/admin')
+                    ->with('success', 'Login berhasil sebagai admin');
+            }
 
-    return redirect('/')
-        ->with('success', 'Login berhasil');
-}
+            return redirect('/')
+                ->with('success', 'Login berhasil');
+        }
 
         return back()
             ->withErrors([

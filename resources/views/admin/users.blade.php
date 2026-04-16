@@ -3,27 +3,18 @@
 @section('content')
 
 <div class="min-h-screen bg-[#fafafa] flex flex-col">
-
-    {{-- TOPBAR COMPONENT --}}
     <x-admin.topbar :title="'Users'" />
 
-    {{-- BODY --}}
     <div class="flex flex-1">
-
-        {{-- NAVBAR COMPONENT --}}
         <x-admin.navbar />
 
-        {{-- MAIN CONTENT --}}
         <main class="flex-1 p-6 space-y-6">
-
-            {{-- HEADER --}}
             <div class="flex justify-between items-center">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-900">Manajemen Users</h1>
                 </div>
             </div>
 
-            {{-- SEARCH & FILTER --}}
             <div class="bg-white rounded-xl p-4 border border-gray-300/50 flex gap-4">
                 <form method="GET" action="{{ route('admin.users') }}" class="flex gap-4 flex-1">
                     <input type="text" name="search" placeholder="Cari nama, email, atau username..."
@@ -35,13 +26,9 @@
                 </form>
             </div>
 
-            {{-- TABLE --}}
             <div class="bg-white rounded-xl overflow-hidden border border-gray-300/50">
-
                 <div class="overflow-x-auto">
-
                     <table class="w-full text-sm">
-
                         <thead class="bg-gray-50 text-left text-gray-500">
                             <tr>
                                 <th class="p-4">No</th>
@@ -79,20 +66,14 @@
                                 </tr>
                             @endforelse
                         </tbody>
-
                     </table>
-
                 </div>
-
             </div>
 
-            {{-- PAGINATION --}}
             <div class="mt-6">
                 {{ $users->links() }}
             </div>
-
         </main>
-
     </div>
 </div>
 

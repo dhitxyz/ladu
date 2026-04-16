@@ -8,25 +8,25 @@ use App\Models\Laporan;
 
 class LaporanController extends Controller
 {
-public function index(Request $request)
-{
-    $query = Laporan::query();
+    public function index(Request $request)
+    {
+        $query = Laporan::where('user_id', auth()->id());
 
-    if ($request->status && $request->status != 'semua') {
-        $query->where('status', $request->status);
+        if ($request->status && $request->status != 'semua') {
+            $query->where('status', $request->status);
+        }
+
+        $laporans = $query->latest()->get();
+
+        return view('user.laporan', compact('laporans'));
     }
 
-    $laporans = $query->latest()->get();
+    public function show($id)
+    {
+        $laporan = Laporan::findOrFail($id);
 
-    return view('user.laporan', compact('laporans'));
-}
-
-public function show($id)
-{
-    $laporan = Laporan::findOrFail($id);
-
-    return view('user.detillaporan', compact('laporan'));
-}
+        return view('user.detillaporan', compact('laporan'));
+    }
 
     public function create()
     {

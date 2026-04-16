@@ -1,12 +1,10 @@
 {{-- Topbar Header Component --}}
 <header class="w-full bg-white px-6 py-3 flex items-center justify-between" style="box-shadow: 0 0 0 calc(1px + 0px) color-mix(in oklab, oklch(0.141 0.005 285.823) 5%, transparent);">
-
     <div>
         <h1 class="text-2xl font-semibold text-[#CA0B3E]">LADU (Layanan Aduan)</h1>
     </div>
 
     <div class="flex items-center gap-3">
-        {{-- Notification Bell --}}
         <button class="relative p-2 rounded-lg hover:bg-gray-100 transition text-lg text-gray-700">
             <i class="fa fa-bell"></i>
             <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] px-1.5 rounded-full">
@@ -14,7 +12,6 @@
             </span>
         </button>
 
-        {{-- Profile Dropdown --}}
         <div x-data="{ open: false }" class="relative">
             <button @click="open = !open" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition">
                 <img src="{{ auth()->user()->jenis_kelamin === 'perempuan' ? 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-f.png' : 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-m.png' }}" alt="{{ auth()->user()->nama_lengkap }}" class="w-10 h-10 rounded-full object-cover">
@@ -44,5 +41,4 @@
             </div>
         </div>
     </div>
-
 </header>

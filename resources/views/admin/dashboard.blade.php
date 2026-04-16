@@ -3,27 +3,18 @@
 @section('content')
 
 <div class="min-h-screen bg-[#fafafa] flex flex-col">
-
-    {{-- TOPBAR COMPONENT --}}
     <x-admin.topbar :title="'Dashboard'" />
 
-    {{-- BODY (SIDEBAR + CONTENT) --}}
     <div class="flex flex-1">
-
-        {{-- NAVBAR COMPONENT --}}
         <x-admin.navbar />
 
-        {{-- MAIN CONTENT --}}
         <main class="flex-1 p-6 space-y-6">
-
-            {{-- TITLE --}}
             <div>
                 <h1 class="text-3xl font-bold text-gray-900">
                     Selamat Datang, {{ auth()->user()->nama_lengkap }}!
                 </h1>
             </div>
 
-            {{-- STATS --}}
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
 
                 <div class="bg-white rounded-xl p-5 border border-gray-300/50">
@@ -68,7 +59,6 @@
 
             </div>
 
-            {{-- SEARCH & FILTER --}}
             <div class="bg-white rounded-xl p-4 border border-gray-300/50 flex gap-4">
                 <form method="GET" action="{{ route('admin.dashboard') }}" class="flex gap-4 flex-1">
                     <input type="text" name="search" placeholder="Cari judul laporan atau nama user..."
@@ -80,17 +70,13 @@
                 </form>
             </div>
 
-            {{-- TABLE --}}
             <div class="bg-white rounded-xl overflow-hidden border border-gray-300/50">
-
                 <div class="p-5 border-b border-gray-300/50">
                     <h2 class="font-semibold text-gray-900">Laporan Terbaru</h2>
                 </div>
 
                 <div class="overflow-x-auto">
-
                     <table class="w-full text-sm">
-
                         <thead class="bg-gray-50 text-left text-gray-500">
                             <tr>
                                 <th class="p-4">User</th>
@@ -128,15 +114,10 @@
                                 </tr>
                             @endforelse
                         </tbody>
-
                     </table>
-
                 </div>
-
             </div>
-
         </main>
-
     </div>
 </div>
 

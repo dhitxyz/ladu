@@ -3,20 +3,12 @@
 @section('content')
 
 <div class="min-h-screen bg-[#fafafa] flex flex-col">
-
-    {{-- TOPBAR COMPONENT --}}
     <x-admin.topbar />
 
-    {{-- BODY --}}
     <div class="flex flex-1">
-
-        {{-- NAVBAR COMPONENT --}}
         <x-admin.navbar />
 
-        {{-- MAIN CONTENT --}}
         <main class="flex-1 p-6 space-y-6">
-
-            {{-- BREADCRUMB --}}
             <div class="mb-4">
                 <nav class="text-sm text-gray-500 flex items-center gap-2">
                     <a href="{{ route('admin.dashboard') }}" class="hover:text-gray-700 text-[#CA0B3E]">
@@ -37,7 +29,6 @@
                 </nav>
             </div>
 
-            {{-- PAGE TITLE --}}
             <h1 class="text-2xl font-bold text-gray-900">
                 @if(!$status)
                     Daftar Semua Laporan
@@ -50,7 +41,6 @@
                 @endif
             </h1>
 
-            {{-- SEARCH & FILTER --}}
             <div class="bg-white rounded-xl p-4 border border-gray-300/50 flex gap-4">
                 <form method="GET" action="{{ route('admin.laporan.index') }}" class="flex gap-4 flex-1">
                     @if(request('status'))
@@ -65,14 +55,9 @@
                 </form>
             </div>
 
-
-            {{-- TABLE --}}
             <div class="bg-white rounded-xl overflow-hidden border border-gray-300/50">
-
                 <div class="overflow-x-auto">
-
                     <table class="w-full text-sm">
-
                         <thead class="bg-gray-50 text-left text-gray-500">
                             <tr>
                                 <th class="p-4">No</th>
@@ -114,20 +99,14 @@
                                 </tr>
                             @endforelse
                         </tbody>
-
                     </table>
-
                 </div>
-
             </div>
 
-            {{-- PAGINATION --}}
             <div class="mt-6">
                 {{ $laporans->links() }}
             </div>
-
         </main>
-
     </div>
 </div>
 
