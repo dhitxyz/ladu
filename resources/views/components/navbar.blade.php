@@ -58,7 +58,7 @@
 
             <!-- Avatar huruf -->
             <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold">
-                <img src="https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-f.png" alt="">
+                <img src="{{ auth()->user()->jenis_kelamin === 'perempuan' ? 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-f.png' : 'https://www.lapor.go.id/../themes/lapor/assets/images/user-placeholder-m.png' }}" alt="">
             </div>
 
             <!-- Nama -->

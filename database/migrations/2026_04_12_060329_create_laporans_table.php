@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('laporans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('set null');
             $table->string('classification');
             $table->string('judul');
             $table->text('isi');
@@ -20,10 +21,10 @@ return new class extends Migration
             $table->string('lokasi');
             $table->string('instansi')->nullable();
             $table->string('kategori')->nullable();
-            $table->string('lampiran')->nullable();
+            $table->text('lampiran')->nullable();
             $table->boolean('anonim')->default(false);
             $table->boolean('rahasia')->default(false);
-            $table->enum('status', ['belum_diproses', 'proses', 'selesai'])->default('belum_diproses');
+            $table->enum('status', ['pending', 'diproses', 'selesai'])->default('pending');
             $table->timestamps();
         });
     }

@@ -74,4 +74,9 @@ class User extends Authenticatable
     {
         return $this->role === 'user';
     }
+
+    public function laporans()
+    {
+        return $this->hasMany(Laporan::class);
+    }
 }

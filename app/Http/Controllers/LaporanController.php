@@ -60,6 +60,7 @@ public function show($id)
         }
 
         $validatedData['lampiran'] = $lampiranPaths;
+        $validatedData['user_id'] = auth()->id();
 
         Laporan::create($validatedData);
 

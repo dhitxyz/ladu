@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,7 +65,16 @@ Route::middleware(['auth', 'role:user'])->group(function () {
 Route::middleware(['auth', 'role:admin'])->group(function () {
 
     // Dashboard admin
-    Route::get('/admin', function () {
-        return view('admin.dashboard');
-    })->name('admin.dashboard');
+    Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    // Laporan
+    Route::get('/admin/laporan', [AdminController::class, 'laporan'])->name('admin.laporan.index');
+    Route::get('/admin/laporan/{id}', [AdminController::class, 'showLaporan'])->name('admin.laporan.show');
+    Route::post('/admin/laporan/{id}/status', [AdminController::class, 'updateStatusLaporan'])->name('admin.laporan.updateStatus');
+
+    // Users
+    Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('/admin/users/{id}', [AdminController::class, 'showUser'])->name('admin.users.show');
+    Route::post('/admin/users/{id}/verify', [AdminController::class, 'verifyUserEmail'])->name('admin.users.verify');
+    Route::post('/admin/users/{id}/unverify', [AdminController::class, 'unverifyUserEmail'])->name('admin.users.unverify');
 });
